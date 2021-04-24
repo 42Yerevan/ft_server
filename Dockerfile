@@ -34,7 +34,7 @@ RUN rm -rf phpMyAdmin-5.0.4-all-languages.tar.gz
 RUN mv phpMyAdmin-5.0.4-all-languages/ /var/www/server/phpmyadmin
 COPY ./srcs/my-admin.php /var/www/server/phpmyadmin
 
-RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt  -subj "/C=AM/ST=Yerevan/L=Yerevan/O=42 School/OU=gamirjan/CN=localhost" 
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt  -subj "/C=AM/ST=Yerevan/L=Yerevan/O=42 School/OU=vmusaely/CN=localhost" 
 
 COPY ./srcs/setup.sh ./
 
